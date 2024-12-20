@@ -1,0 +1,25 @@
+{
+  "achievements": [
+    {
+      "id": "first-cleanup",
+      "name": "Premier Nettoyage",
+      "description": "Terminer votre première session de tri",
+      "icon": "/assets/images/ui/achievements/first-cleanup.png",
+      "condition": "complete_game:1"
+    },
+    {
+      "id": "collector",
+      "name": "Collectionneur",
+      "description": "Trouver 5 objets remarquables",
+      "icon": "/assets/images/ui/achievements/collector.png",
+      "condition": "remarkable_items:5"
+    },
+    {
+      "id": "master-recycler",
+      "name": "Maître du Recyclage",
+      "description": "Obtenir un score parfait sur un niveau",
+      "icon": "/assets/images/ui/achievements/master.png",
+      "condition": "perfect_score:1"
+    }
+  ]
+}

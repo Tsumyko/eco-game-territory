@@ -1,0 +1,43 @@
+{
+  "zones": [
+    {
+      "id": "mont-lozere",
+      "name": "Mont Lozère",
+      "description": "Plus haut sommet des Cévennes",
+      "background": "/assets/images/backgrounds/mont-lozere.jpg",
+      "position": {
+        "x": 25,
+        "y": 25
+      },
+      "remarkableItems": ["artifact-1", "artifact-2"],
+      "difficulty": 1,
+      "unlockCondition": "none"
+    },
+    {
+      "id": "vallee-francaise",
+      "name": "Vallée Française",
+      "description": "Vallée historique des Cévennes",
+      "background": "/assets/images/backgrounds/vallee-francaise.jpg",
+      "position": {
+        "x": 33,
+        "y": 50
+      },
+      "remarkableItems": ["artifact-3", "artifact-4"],
+      "difficulty": 2,
+      "unlockCondition": "mont-lozere-complete"
+    },
+    {
+      "id": "mont-aigoual",
+      "name": "Mont Aigoual",
+      "description": "Observatoire météorologique historique",
+      "background": "/assets/images/backgrounds/mont-aigoual.jpg",
+      "position": {
+        "x": 50,
+        "y": 67
+      },
+      "remarkableItems": ["artifact-5", "artifact-6"],
+      "difficulty": 3,
+      "unlockCondition": "vallee-francaise-complete"
+    }
+  ]
+}
