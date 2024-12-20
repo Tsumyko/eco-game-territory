@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import HomePage from './pages/HomePage';
 
 export default function App() {
   const [currentPage, setCurrentPage] = useState('home');
