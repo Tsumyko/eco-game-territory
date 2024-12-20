@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Map, Home, Backpack } from 'lucide-react';
-import zones from '../data/zones.json';
 
 const ZoneMarker = ({ zone, isUnlocked, isCompleted, onClick }) => {
   return (
@@ -29,13 +28,46 @@ const ZoneMarker = ({ zone, isUnlocked, isCompleted, onClick }) => {
 export default function GameMap({ playerData, onUpdatePlayer, onNavigate }) {
   const [selectedZone, setSelectedZone] = useState(null);
 
+  const zones = [
+    {
+      id: 'mont-lozere',
+      name: 'Mont Lozère',
+      description: 'Plus haut sommet des Cévennes',
+      position: { x: 25, y: 25 }
+    },
+    {
+      id: 'vallee-francaise',
+      name: 'Vallée Française',
+      description: 'Vallée historique des Cévennes',
+      position: { x: 33, y: 50 }
+    },
+    {
+      id: 'mont-aigoual',
+      name: 'Mont Aigoual',
+      description: 'Observatoire météorologique historique',
+      position: { x: 50, y: 67 }
+    },
+    {
+      id: 'causses',
+      name: 'Causses',
+      description: 'Plateaux calcaires typiques',
+      position: { x: 75, y: 25 }
+    },
+    {
+      id: 'vallee-longue',
+      name: 'Vallée Longue',
+      description: 'Vallée cévenole typique',
+      position: { x: 67, y: 75 }
+    }
+  ];
+
   const handleZoneClick = (zone) => {
     setSelectedZone(zone);
   };
 
   return (
     <div className="min-h-screen relative">
-      {/* Header */}
+      {/* Header avec score et boutons */}
       <div className="bg-white shadow-md p-4">
         <div className="max-w-7xl mx-auto flex justify-between items-center">
           <div className="flex items-center gap-4">
@@ -58,11 +90,10 @@ export default function GameMap({ playerData, onUpdatePlayer, onNavigate }) {
         </div>
       </div>
 
-      {/* Map Area */}
-      <div className="relative w-full h-[calc(100vh-4rem)] bg-blue-100">
-        <div className="absolute inset-0 bg-[url('/backgrounds/cevennes-map.jpg')] 
-          bg-cover bg-center">
-          {zones.zones.map(zone => (
+      {/* Zone de carte */}
+      <div className="relative w-full h-[calc(100vh-4rem)]">
+        <div className="absolute inset-0 bg-green-100">
+          {zones.map(zone => (
             <ZoneMarker
               key={zone.id}
               zone={zone}
@@ -74,7 +105,7 @@ export default function GameMap({ playerData, onUpdatePlayer, onNavigate }) {
         </div>
       </div>
 
-      {/* Zone Selection Modal */}
+      {/* Modal de sélection de zone */}
       {selectedZone && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center 
           justify-center p-4">
@@ -84,18 +115,16 @@ export default function GameMap({ playerData, onUpdatePlayer, onNavigate }) {
             <div className="flex justify-end gap-4">
               <button
                 onClick={() => setSelectedZone(null)}
-                className="px-4 py-2 bg-gray-500 text-white rounded-lg 
-                  hover:bg-gray-600"
+                className="px-4 py-2 bg-gray-500 text-white rounded-lg hover:bg-gray-600"
               >
                 Fermer
               </button>
               <button
                 onClick={() => {
-                  // Start game for selected zone
-                  onNavigate('game-zone', { zoneId: selectedZone.id });
+                  onNavigate('zone-game', { zoneId: selectedZone.id });
+                  setSelectedZone(null);
                 }}
-                className="px-4 py-2 bg-green-500 text-white rounded-lg 
-                  hover:bg-green-600"
+                className="px-4 py-2 bg-green-500 text-white rounded-lg hover:bg-green-600"
               >
                 Jouer
               </button>
