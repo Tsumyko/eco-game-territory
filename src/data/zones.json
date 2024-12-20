@@ -4,40 +4,51 @@
       "id": "mont-lozere",
       "name": "Mont Lozère",
       "description": "Plus haut sommet des Cévennes",
-      "background": "/assets/images/backgrounds/mont-lozere.jpg",
-      "position": {
-        "x": 25,
-        "y": 25
-      },
-      "remarkableItems": ["artifact-1", "artifact-2"],
+      "background": "/backgrounds/mont-lozere.jpg",
+      "position": { "x": 25, "y": 25 },
+      "unlocked": true,
       "difficulty": 1,
-      "unlockCondition": "none"
+      "collectibles": ["old-map", "hiking-compass"]
     },
     {
       "id": "vallee-francaise",
       "name": "Vallée Française",
       "description": "Vallée historique des Cévennes",
-      "background": "/assets/images/backgrounds/vallee-francaise.jpg",
-      "position": {
-        "x": 33,
-        "y": 50
-      },
-      "remarkableItems": ["artifact-3", "artifact-4"],
+      "background": "/backgrounds/vallee-francaise.jpg",
+      "position": { "x": 33, "y": 50 },
+      "unlocked": false,
       "difficulty": 2,
-      "unlockCondition": "mont-lozere-complete"
+      "collectibles": ["ancient-book", "traditional-tool"]
     },
     {
       "id": "mont-aigoual",
       "name": "Mont Aigoual",
       "description": "Observatoire météorologique historique",
-      "background": "/assets/images/backgrounds/mont-aigoual.jpg",
-      "position": {
-        "x": 50,
-        "y": 67
-      },
-      "remarkableItems": ["artifact-5", "artifact-6"],
+      "background": "/backgrounds/mont-aigoual.jpg",
+      "position": { "x": 50, "y": 67 },
+      "unlocked": false,
+      "difficulty": 2,
+      "collectibles": ["weather-diary", "old-telescope"]
+    },
+    {
+      "id": "causses",
+      "name": "Causses",
+      "description": "Plateaux calcaires typiques",
+      "background": "/backgrounds/causses.jpg",
+      "position": { "x": 75, "y": 25 },
+      "unlocked": false,
       "difficulty": 3,
-      "unlockCondition": "vallee-francaise-complete"
+      "collectibles": ["shepherds-bell", "cave-map"]
+    },
+    {
+      "id": "vallee-longue",
+      "name": "Vallée Longue",
+      "description": "Vallée cévenole typique",
+      "background": "/backgrounds/vallee-longue.jpg",
+      "position": { "x": 67, "y": 75 },
+      "unlocked": false,
+      "difficulty": 3,
+      "collectibles": ["silk-cocoon", "weaving-shuttle"]
     }
   ]
 }
