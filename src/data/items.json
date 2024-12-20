@@ -1,0 +1,32 @@
+{
+  "recyclable": [
+    {
+      "id": "plastic-1",
+      "type": "plastique",
+      "image": "/assets/items/plastic-1.png",
+      "variants": ["plastic-1a", "plastic-1b"]
+    },
+    {
+      "id": "glass-1",
+      "type": "verre",
+      "image": "/assets/items/glass-1.png",
+      "variants": ["glass-1a", "glass-1b"]
+    },
+    {
+      "id": "paper-1",
+      "type": "papier",
+      "image": "/assets/items/paper-1.png",
+      "variants": ["paper-1a", "paper-1b"]
+    }
+  ],
+  "remarkable": [
+    {
+      "id": "artifact-1",
+      "name": "Vieux carnet",
+      "description": "Un carnet de notes ayant appartenu à un ancien garde forestier",
+      "image": "/assets/items/remarkable/artifact-1.png",
+      "location": "mont-lozere",
+      "story": "Ce carnet contient des observations fascinantes sur la faune et la flore du Mont Lozère dans les années 1950."
+    }
+  ]
+}
