@@ -1,48 +1,56 @@
 # Éco-Game Territory
 
-Un jeu éducatif sur l'environnement et le recyclage dans le parc des Cévennes.
+Jeu éducatif sur l'environnement et le recyclage situé dans le parc des Cévennes
+
+## Description
+
+Éco-Game Territory est un jeu en deux phases qui vise à sensibiliser aux enjeux environnementaux :
+
+1. Tri'athlon : Un jeu de tri des déchets
+2. Territoire : Une exploration du parc des Cévennes
 
 ## Structure du Projet
 
 ```
 /src
-  /components        # Composants React réutilisables
-  /pages            # Pages principales de l'application
+  /components
+    /ui          # Composants d'interface
+    /game        # Composants spécifiques au jeu
+    /pages       # Pages de l'application
   /assets
     /images
-      /backgrounds  # Fonds d'écran des différentes zones
-      /items       # Items à recycler et objets remarquables
-      /ui          # Éléments d'interface (boutons, icônes)
-    /sounds        # Effets sonores et musiques
-  /data           # Données JSON pour les items et configurations
-  /hooks          # Custom hooks React
-  /utils          # Fonctions utilitaires
+      /backgrounds # Images de fond (menu, zones)
+      /items
+        /trash     # Items à recycler
+        /collectibles # Objets à collecter
+      /ui        # Éléments d'interface
+    /sounds      # Effets sonores
+  /data         # Fichiers de configuration JSON
 ```
 
-## Installation
+## Prérequis Visuels
 
-1. Cloner le repository
-2. Installer les dépendances : `npm install`
-3. Lancer le serveur de développement : `npm run dev`
+### Backgrounds nécessaires
+- Menu principal (3-4 variations)
+- Carte des Cévennes avec les 5 zones :
+  - Mont Lozère
+  - Vallée Française
+  - Mont Aigoual
+  - Causses
+  - Vallée Longue
 
-## Assets à Intégrer
+### Items de jeu
+1. Déchets recyclables (plusieurs variations par type) :
+   - Plastique : 5-6 versions
+   - Verre : 5-6 versions
+   - Papier : 5-6 versions
 
-### Backgrounds
-- Page d'accueil (plusieurs variations)
-- Carte des Cévennes
-- Fonds pour chaque zone de jeu (5 zones)
+2. Objets collectionnables :
+   - Un objet unique par zone
+   - Image objet + carte d'information
 
-### Items à Recycler
-- Plastique (plusieurs variations)
-- Verre (plusieurs variations)
-- Papier (plusieurs variations)
-
-### Items Remarquables
-- Liste des objets uniques à découvrir
-- Description et histoire pour chaque objet
-
-### Interface
-- Boutons personnalisés
-- Éléments de menu
-- Icônes des poubelles
-- Interface du sac à dos
+### Interface utilisateur
+- Boutons menu (normal/hover/pressed)
+- Icônes poubelles (par type)
+- Interface sac à dos
+- Score et progression
