@@ -2,9 +2,11 @@ import React, { useState } from 'react';
 import HomePage from './pages/HomePage';
 import GameMap from './pages/GameMap';
 import InventoryPage from './pages/InventoryPage';
+import ZoneGame from './pages/ZoneGame';
 
 export default function App() {
   const [currentPage, setCurrentPage] = useState('home');
+  const [currentZone, setCurrentZone] = useState(null);
   const [playerData, setPlayerData] = useState({
     score: 0,
     inventory: [
@@ -22,7 +24,6 @@ export default function App() {
 
   const navigateTo = (page, data = {}) => {
     setCurrentPage(page);
-    // Stocker les données supplémentaires si nécessaire
     if (data.zoneId) {
       setCurrentZone(data.zoneId);
     }
@@ -51,6 +52,21 @@ export default function App() {
         return (
           <InventoryPage
             inventory={playerData.inventory}
+            onNavigate={navigateTo}
+          />
+        );
+      case 'zone-game':
+        return currentZone ? (
+          <ZoneGame
+            zoneId={currentZone}
+            playerData={playerData}
+            onUpdatePlayer={updatePlayerData}
+            onNavigate={navigateTo}
+          />
+        ) : (
+          <GameMap
+            playerData={playerData}
+            onUpdatePlayer={updatePlayerData}
             onNavigate={navigateTo}
           />
         );
