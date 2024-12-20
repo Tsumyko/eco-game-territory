@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import HomePage from './pages/HomePage';
+import GameMap from './pages/GameMap';
 
 export default function App() {
   const [currentPage, setCurrentPage] = useState('home');
@@ -10,8 +11,12 @@ export default function App() {
     unlockedZones: ['mont-lozere']
   });
 
-  const navigateTo = (page) => {
+  const navigateTo = (page, data = {}) => {
     setCurrentPage(page);
+    // Stocker les données supplémentaires si nécessaire
+    if (data.zoneId) {
+      setCurrentZone(data.zoneId);
+    }
   };
 
   const updatePlayerData = (newData) => {
@@ -27,7 +32,11 @@ export default function App() {
         return <HomePage onNavigate={navigateTo} />;
       case 'game':
         return (
-          <div>Game Page</div>
+          <GameMap
+            playerData={playerData}
+            onUpdatePlayer={updatePlayerData}
+            onNavigate={navigateTo}
+          />
         );
       case 'inventory':
         return (
