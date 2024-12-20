@@ -1,12 +1,21 @@
 import React, { useState } from 'react';
 import HomePage from './pages/HomePage';
 import GameMap from './pages/GameMap';
+import InventoryPage from './pages/InventoryPage';
 
 export default function App() {
   const [currentPage, setCurrentPage] = useState('home');
   const [playerData, setPlayerData] = useState({
     score: 0,
-    inventory: [],
+    inventory: [
+      {
+        id: 'test-item-1',
+        name: 'Vieille Boussole',
+        description: 'Une boussole ancienne en laiton',
+        story: 'Utilisée par les premiers guides du parc',
+        zone: 'Mont Lozère'
+      }
+    ],
     completedZones: [],
     unlockedZones: ['mont-lozere']
   });
@@ -40,7 +49,10 @@ export default function App() {
         );
       case 'inventory':
         return (
-          <div>Inventory Page</div>
+          <InventoryPage
+            inventory={playerData.inventory}
+            onNavigate={navigateTo}
+          />
         );
       case 'settings':
         return <div>Settings Page</div>;
