@@ -15,6 +15,9 @@
 - [x] TrashBin - Poubelles de tri
 - [x] BackpackContainer - Sac à dos pour objets remarquables
 
+### Composants UI Réutilisables
+- [x] Button - Boutons personnalisés avec variantes et tailles
+
 ## À Faire
 
 ### Pages
@@ -23,7 +26,6 @@
 - [ ] CreditsPage - Crédits et remerciements
 
 ### Composants UI Réutilisables
-- [ ] Button - Boutons personnalisés
 - [ ] Card - Cartes pour l'affichage des informations
 - [ ] Modal - Fenêtres modales
 - [ ] Toast - Notifications
@@ -68,7 +70,7 @@
 - Prévoir l'intégration des assets graphiques
 
 ## Prochaines Étapes
-1. Créer les composants UI réutilisables
+1. Créer le reste des composants UI (Card, Modal, Toast)
 2. Implémenter la page des paramètres
 3. Ajouter le système de sauvegarde
 4. Intégrer les premiers assets graphiques
