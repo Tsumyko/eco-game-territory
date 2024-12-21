@@ -17,6 +17,7 @@
 
 ### Composants UI Réutilisables
 - [x] Button - Boutons personnalisés avec variantes et tailles
+- [x] Card - Cartes pour l'affichage des informations
 
 ## À Faire
 
@@ -26,7 +27,6 @@
 - [ ] CreditsPage - Crédits et remerciements
 
 ### Composants UI Réutilisables
-- [ ] Card - Cartes pour l'affichage des informations
 - [ ] Modal - Fenêtres modales
 - [ ] Toast - Notifications
 
@@ -70,7 +70,7 @@
 - Prévoir l'intégration des assets graphiques
 
 ## Prochaines Étapes
-1. Créer le reste des composants UI (Card, Modal, Toast)
+1. Créer le reste des composants UI (Modal, Toast)
 2. Implémenter la page des paramètres
 3. Ajouter le système de sauvegarde
 4. Intégrer les premiers assets graphiques
