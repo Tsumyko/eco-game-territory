@@ -1,39 +1,41 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import HomePage from './pages/HomePage';
 import GameMap from './pages/GameMap';
 import InventoryPage from './pages/InventoryPage';
 import ZoneGame from './pages/ZoneGame';
+import SettingsPage from './pages/SettingsPage';
+import { loadData, saveData, getDefaultPlayerData } from './utils/storage';
+import { useAudio } from './hooks/useAudio';
 
 export default function App() {
   const [currentPage, setCurrentPage] = useState('home');
   const [currentZone, setCurrentZone] = useState(null);
-  const [playerData, setPlayerData] = useState({
-    score: 0,
-    inventory: [
-      {
-        id: 'test-item-1',
-        name: 'Vieille Boussole',
-        description: 'Une boussole ancienne en laiton',
-        story: 'Utilisée par les premiers guides du parc',
-        zone: 'Mont Lozère'
-      }
-    ],
-    completedZones: [],
-    unlockedZones: ['mont-lozere']
-  });
+  const [playerData, setPlayerData] = useState(getDefaultPlayerData());
+  const { play, isLoaded, isMuted, toggleMute } = useAudio();
+
+  // Chargement des données au démarrage
+  useEffect(() => {
+    const savedData = loadData();
+    if (savedData) {
+      setPlayerData(savedData);
+    }
+  }, []);
 
   const navigateTo = (page, data = {}) => {
     setCurrentPage(page);
     if (data.zoneId) {
       setCurrentZone(data.zoneId);
     }
+    play('ui', 'click', { volume: playerData.settings.sfxVolume / 100 });
   };
 
   const updatePlayerData = (newData) => {
-    setPlayerData(prev => ({
-      ...prev,
+    const updatedData = {
+      ...playerData,
       ...newData
-    }));
+    };
+    setPlayerData(updatedData);
+    saveData(updatedData);
   };
 
   const renderPage = () => {
@@ -71,7 +73,18 @@ export default function App() {
           />
         );
       case 'settings':
-        return <div>Settings Page</div>;
+        return (
+          <SettingsPage
+            settings={playerData.settings}
+            onUpdateSettings={(newSettings) => {
+              updatePlayerData({ settings: newSettings });
+              if (isMuted !== !newSettings.soundEnabled) {
+                toggleMute();
+              }
+            }}
+            onNavigate={navigateTo}
+          />
+        );
       default:
         return <HomePage onNavigate={navigateTo} />;
     }
