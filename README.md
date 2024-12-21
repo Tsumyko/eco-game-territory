@@ -9,6 +9,20 @@ Jeu éducatif sur l'environnement et le recyclage situé dans le parc des Céven
 1. Tri'athlon : Un jeu de tri des déchets
 2. Territoire : Une exploration du parc des Cévennes
 
+## Installation
+
+```bash
+# Cloner le projet
+git clone https://github.com/Tsumyko/eco-game-territory.git
+cd eco-game-territory
+
+# Installer les dépendances
+npm install
+
+# Lancer en développement
+npm run dev
+```
+
 ## État d'Avancement
 
 ### Composants Terminés
@@ -33,16 +47,17 @@ Jeu éducatif sur l'environnement et le recyclage situé dans le parc des Céven
 - [x] Modal - Fenêtres modales avec Radix UI
 - [x] Toast - Notifications
 
+#### Systèmes
+- [x] Sauvegarde locale avec versionning
+- [x] Sons et musique
+
 ### En Développement
 
 #### Prochaines Étapes
-1. Ajouter le système de sauvegarde
-2. Intégrer les premiers assets graphiques
-3. Mettre en place les tests de base
-
-#### Pages Restantes
-- [ ] HighScoresPage - Tableau des scores
-- [ ] CreditsPage - Crédits et remerciements
+1. Mettre en place les tests de base
+2. Développer les pages manquantes (HighScores, Credits)
+3. Intégrer les assets graphiques finaux
+4. Optimisation des performances
 
 ## Structure du Projet
 
@@ -59,8 +74,10 @@ Jeu éducatif sur l'environnement et le recyclage situé dans le parc des Céven
         /trash     # Items à recycler
         /collectibles # Objets à collecter
       /ui        # Éléments d'interface
-    /sounds      # Effets sonores
+    /sounds      # Effets sonores et musiques
   /data         # Fichiers de configuration JSON
+  /hooks        # Hooks personnalisés
+  /utils        # Utilitaires (stockage, audio)
 ```
 
 ## Prérequis Visuels
