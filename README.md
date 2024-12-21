@@ -9,6 +9,41 @@ Jeu éducatif sur l'environnement et le recyclage situé dans le parc des Céven
 1. Tri'athlon : Un jeu de tri des déchets
 2. Territoire : Une exploration du parc des Cévennes
 
+## État d'Avancement
+
+### Composants Terminés
+
+#### Pages Principales
+- [x] App.jsx - Structure principale de l'application
+- [x] HomePage - Page d'accueil avec menu principal
+- [x] GameMap - Carte interactive des Cévennes
+- [x] InventoryPage - Gestion de l'inventaire des objets remarquables
+- [x] ZoneGame - Page de jeu pour chaque zone
+- [x] SettingsPage - Page des paramètres
+
+#### Composants de Jeu
+- [x] TriathlonGame - Jeu principal de tri des déchets
+- [x] TrashItem - Éléments à trier
+- [x] TrashBin - Poubelles de tri
+- [x] BackpackContainer - Sac à dos pour objets remarquables
+
+#### Composants UI Réutilisables
+- [x] Button - Boutons personnalisés avec variantes et tailles
+- [x] Card - Cartes pour l'affichage des informations
+- [x] Modal - Fenêtres modales avec Radix UI
+- [x] Toast - Notifications
+
+### En Développement
+
+#### Prochaines Étapes
+1. Ajouter le système de sauvegarde
+2. Intégrer les premiers assets graphiques
+3. Mettre en place les tests de base
+
+#### Pages Restantes
+- [ ] HighScoresPage - Tableau des scores
+- [ ] CreditsPage - Crédits et remerciements
+
 ## Structure du Projet
 
 ```
