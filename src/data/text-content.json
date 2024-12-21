@@ -1,0 +1,26 @@
+{
+  "fr": {
+    "welcome": "Bienvenue dans Éco-Game Territory",
+    "start": "Commencer",
+    "settings": "Paramètres",
+    "inventory": "Inventaire",
+    "back": "Retour",
+    "gameOver": "Partie terminée",
+    "score": "Score : {points} points",
+    "newHighScore": "Nouveau record !",
+    "tryAgain": "Réessayer",
+    "mainMenu": "Menu principal"
+  },
+  "en": {
+    "welcome": "Welcome to Eco-Game Territory",
+    "start": "Start",
+    "settings": "Settings",
+    "inventory": "Inventory",
+    "back": "Back",
+    "gameOver": "Game Over",
+    "score": "Score: {points} points",
+    "newHighScore": "New High Score!",
+    "tryAgain": "Try Again",
+    "mainMenu": "Main Menu"
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "zones": [
+    {
+      "id": "mont-lozere",
+      "name": "Mont Lozère",
+      "description": "Le point culminant des Cévennes",
+      "coordinates": { "x": 200, "y": 200 },
+      "collectible": {
+        "id": "compass",
+        "name": "Vieille Boussole",
+        "description": "Une boussole ancienne en laiton",
+        "story": "Utilisée par les premiers guides du parc"
+      }
+    },
+    {
+      "id": "vallee-francaise",
+      "name": "Vallée Française",
+      "description": "Vallée historique des Cévennes",
+      "coordinates": { "x": 500, "y": 300 },
+      "locked": true
+    }
+  ],
+  "trash": {
+    "plastic": [
+      {
+        "id": "plastic-bottle",
+        "name": "Bouteille en plastique",
+        "points": 10,
+        "type": "plastic"
+      }
+    ],
+    "glass": [
+      {
+        "id": "glass-bottle",
+        "name": "Bouteille en verre",
+        "points": 15,
+        "type": "glass"
+      }
+    ],
+    "paper": [
+      {
+        "id": "paper",
+        "name": "Feuille de papier",
+        "points": 5,
+        "type": "paper"
+      }
+    ]
+  }
+}
