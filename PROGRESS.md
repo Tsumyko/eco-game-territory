@@ -18,6 +18,7 @@
 ### Composants UI Réutilisables
 - [x] Button - Boutons personnalisés avec variantes et tailles
 - [x] Card - Cartes pour l'affichage des informations
+- [x] Modal - Fenêtres modales avec Radix UI
 
 ## À Faire
 
@@ -27,7 +28,6 @@
 - [ ] CreditsPage - Crédits et remerciements
 
 ### Composants UI Réutilisables
-- [ ] Modal - Fenêtres modales
 - [ ] Toast - Notifications
 
 ### Fonctionnalités
@@ -70,7 +70,7 @@
 - Prévoir l'intégration des assets graphiques
 
 ## Prochaines Étapes
-1. Créer le reste des composants UI (Modal, Toast)
+1. Créer le composant Toast
 2. Implémenter la page des paramètres
 3. Ajouter le système de sauvegarde
 4. Intégrer les premiers assets graphiques
